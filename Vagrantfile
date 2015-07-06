@@ -30,5 +30,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: "apt-get install -y python-pip mongodb-server"
   config.vm.provision "shell", inline: "pip install eve"
+  config.vm.provision "shell", inline: "/vagrant/setup.sh"
 
 end
