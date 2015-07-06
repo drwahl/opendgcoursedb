@@ -1,4 +1,3 @@
-DOMAIN = {'courses': {}}
 # Please note that MONGO_HOST and MONGO_PORT could very well be left
 # out as they already default to a bare bones local 'mongod' instance.
 MONGO_HOST = 'localhost'
@@ -9,6 +8,8 @@ schema = {
         'type': 'string',
         'minlength': 1,
         'maxlength': 100,
+        'unique': True,
+        'required': True
     },
     'country': {
         'type': 'string',
@@ -63,3 +64,12 @@ schema = {
         'type': 'datetime'
     }
 }
+
+courses = {
+    'item_title': 'name',
+    'resource_methods': ['GET', 'POST'],
+    'schema': schema
+}
+RESOURCE_METHODS = ['GET', 'POST']
+ITEM_METHODS = ['GET', 'PATCH', 'PUT']
+DOMAIN = {'courses': courses}
