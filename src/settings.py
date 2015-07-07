@@ -72,4 +72,6 @@ courses = {
 }
 RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT']
+X_DOMAINS = '*'
+X_HEADERS = ['Content-Type', 'If-Match']
 DOMAIN = {'courses': courses}
